@@ -3,6 +3,26 @@ import Logo from "@/assets/Logo.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+
+  const NavLink = [
+    {
+      id: 0,
+      to: '/',
+      links: 'Buyer Central'
+    },
+    {
+      id: 1,
+      to: '/',
+      links: 'Help Center'
+    },
+    {
+      id: 2,
+      to: '/',
+      links: 'About Us'
+    },
+  ]
+
+
   return (
     <nav className="py-10">
       <Container>
@@ -152,7 +172,10 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-[20px] items-center">
-              <Link to="/auth" className="text-[#5A5C5F] text-[14px] font-bold leading-[23px] flex gap-2">
+              <Link
+                to="/auth"
+                className="text-[#5A5C5F] text-[14px] font-bold leading-[23px] flex gap-2"
+              >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -179,8 +202,50 @@ export default function Navbar() {
                 <span>Sign in</span>
               </Link>
 
-              <Link className="py-[7px] px-[34px] bg-[#5A5C5F] rounded-[8px] text-[#FFF] text-[14px] font-bold leading-[23px]">Sign Up</Link>
+              <Link className="py-[7px] px-[34px] bg-[#5A5C5F] rounded-[8px] text-[#FFF] text-[14px] font-bold leading-[23px]">
+                Sign Up
+              </Link>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-[30px] flex justify-between items-center">
+          <div>
+            <ul className="flex gap-4 items-center">
+              <li className="flex items-center gap-2 cursor-pointer text-[#5A5C5F] text-[16px] font-bold leading-[28px] capitalize">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M6.75 7.87231C6.75 8.07123 6.67098 8.26199 6.53033 8.40264C6.38968 8.5433 6.19891 8.62231 6 8.62231H4C3.80109 8.62231 3.61032 8.5433 3.46967 8.40264C3.32902 8.26199 3.25 8.07123 3.25 7.87231C3.25 7.6734 3.32902 7.48264 3.46967 7.34198C3.61032 7.20133 3.80109 7.12231 4 7.12231H6C6.19891 7.12231 6.38968 7.20133 6.53033 7.34198C6.67098 7.48264 6.75 7.6734 6.75 7.87231ZM6 12.1223H4C3.80109 12.1223 3.61032 12.2013 3.46967 12.342C3.32902 12.4826 3.25 12.6734 3.25 12.8723C3.25 13.0712 3.32902 13.262 3.46967 13.4026C3.61032 13.5433 3.80109 13.6223 4 13.6223H6C6.19891 13.6223 6.38968 13.5433 6.53033 13.4026C6.67098 13.262 6.75 13.0712 6.75 12.8723C6.75 12.6734 6.67098 12.4826 6.53033 12.342C6.38968 12.2013 6.19891 12.1223 6 12.1223ZM6 17.1223H4C3.80109 17.1223 3.61032 17.2013 3.46967 17.342C3.32902 17.4826 3.25 17.6734 3.25 17.8723C3.25 18.0712 3.32902 18.262 3.46967 18.4026C3.61032 18.5433 3.80109 18.6223 4 18.6223H6C6.19891 18.6223 6.38968 18.5433 6.53033 18.4026C6.67098 18.262 6.75 18.0712 6.75 17.8723C6.75 17.6734 6.67098 17.4826 6.53033 17.342C6.38968 17.2013 6.19891 17.1223 6 17.1223ZM9 8.62231H20C20.1989 8.62231 20.3897 8.5433 20.5303 8.40264C20.671 8.26199 20.75 8.07123 20.75 7.87231C20.75 7.6734 20.671 7.48264 20.5303 7.34198C20.3897 7.20133 20.1989 7.12231 20 7.12231H9C8.80109 7.12231 8.61032 7.20133 8.46967 7.34198C8.32902 7.48264 8.25 7.6734 8.25 7.87231C8.25 8.07123 8.32902 8.26199 8.46967 8.40264C8.61032 8.5433 8.80109 8.62231 9 8.62231ZM20 17.1223H9C8.80109 17.1223 8.61032 17.2013 8.46967 17.342C8.32902 17.4826 8.25 17.6734 8.25 17.8723C8.25 18.0712 8.32902 18.262 8.46967 18.4026C8.61032 18.5433 8.80109 18.6223 9 18.6223H20C20.1989 18.6223 20.3897 18.5433 20.5303 18.4026C20.671 18.262 20.75 18.0712 20.75 17.8723C20.75 17.6734 20.671 17.4826 20.5303 17.342C20.3897 17.2013 20.1989 17.1223 20 17.1223ZM20 12.1223H9C8.80109 12.1223 8.61032 12.2013 8.46967 12.342C8.32902 12.4826 8.25 12.6734 8.25 12.8723C8.25 13.0712 8.32902 13.262 8.46967 13.4026C8.61032 13.5433 8.80109 13.6223 9 13.6223H20C20.1989 13.6223 20.3897 13.5433 20.5303 13.4026C20.671 13.262 20.75 13.0712 20.75 12.8723C20.75 12.6734 20.671 12.4826 20.5303 12.342C20.3897 12.2013 20.1989 12.1223 20 12.1223Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <span>All categories</span>
+              </li>
+              <li>
+                <Link className="text-[#5A5C5F] text-[16px] font-bold leading-[28px] capitalize">Featured selections</Link>
+              </li>
+              <li>
+                <Link className="text-[#5A5C5F] text-[16px] font-bold leading-[28px] capitalize">Trade Assurance</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <ul className="flex gap-4 items-center">
+              {NavLink.map((Links)=>(
+                  <li key={Links.id}>
+                    <Link to={Links.to} className="text-[#5A5C5F] text-[16px] font-bold leading-[28px] capitalize">{Links.links}</Link>
+                  </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Container>
