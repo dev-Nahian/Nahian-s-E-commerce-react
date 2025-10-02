@@ -1,6 +1,11 @@
+import HomeDepartment from "@/components/homeComponents/HomeDepartment";
+import HomeHero from "@/components/homeComponents/HomeHero";
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <HomeHero />
+      <HomeDepartment />
+    </>
+  );
 }

@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-body{
+body {
   font-family: "Raleway", sans-serif;
 }
 
 @theme {
-  --inset-shadow-custom: 0 2px 16px 0 rgba(0, 0, 0, 0.08); 
+  --inset-shadow-custom: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
 }
 
 @theme inline {
@@ -126,4 +126,31 @@ body{
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.backGroundBg {
+  background: url(./assets/HeroBanner.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.customBgBanner {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.44);
+  backdrop-filter: blur(5.5px);
+  width: max-content;
+}
+
+.layout_cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
 }
