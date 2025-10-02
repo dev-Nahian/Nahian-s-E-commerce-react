@@ -2,6 +2,7 @@ import Container from "@/components/Common/Container";
 import mens from "@/assets/mensDepartment.png";
 import womenDep from "@/assets/womensDepartment.png";
 import childrenDep from "@/assets/childDepartment.png";
+import CommonHeader from "../Common/CommonHeader";
 
 const DepartMents = [
   {
@@ -23,12 +24,10 @@ const DepartMents = [
 
 export default function HomeDepartment() {
   return (
-    <section className="py-[120px]">
+    <section className="py-[120px] bg-[#FAFBFC]">
       <Container>
         <div>
-          <h2 className="text-[#1A1A1A] text-[48px] font-extrabold leading-[64px] text-center">
-            Choose a department
-          </h2>
+          <CommonHeader content="Choose a department" />
           <div className="mt-[64px] relative">
             <div className="grid grid-cols-3 gap-5 relative z-40">
               {DepartMents.map((item) => (

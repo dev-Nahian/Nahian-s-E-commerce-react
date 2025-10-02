@@ -1,7 +1,7 @@
-import React from 'react'
 
-export default function CommonHeader() {
+
+export default function CommonHeader({content}) {
   return (
-    <div>CommonHeader</div>
+    <h2 className='text-[#1A1A1A] text-[48px] font-extrabold leading-[64px] text-center'>{content}</h2>
   )
 }
