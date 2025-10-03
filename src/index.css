@@ -174,3 +174,9 @@ body {
   font-weight: 700;
   line-height: 164%; 
 }
+.disCountBannerCustom{
+  padding: 94px 0;
+  background: url(./assets/discountBanner.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}

@@ -35,7 +35,7 @@ export default function ForgetPass() {
               >
                 <div
                   className={`w-[650px] py-[25px] px-[20px] bg-[#FAFBFC] border ${
-                    errors.email ? " border-red-400" : " border-[#DFE1E6]"
+                    errors.ForgetEmail ? " border-red-400" : " border-[#DFE1E6]"
                   } rounded-[8px]`}
                 >
                   <input

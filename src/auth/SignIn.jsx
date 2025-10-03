@@ -74,7 +74,7 @@ export default function SignIn() {
                 <button className="py-[10px] bg-[#1A1A1A] text-white rounded-[8px] text-[20px] font-bold leading-8">Sign In</button>
               </form>
             </div>
-            <Link className="text-[#5A5C5F] text-[18px] font-semibold leading-6 tracking-[-0.36px] flex justify-center mt-5">New Here? <span className="text-[#1A1A1A] font-bold border-b border-b-[#1A1A1A]"> Register Today</span></Link>
+            <Link to="/auth/sign-up" className="text-[#5A5C5F] text-[18px] font-semibold leading-6 tracking-[-0.36px] flex justify-center mt-5">New Here? <span className="text-[#1A1A1A] font-bold border-b border-b-[#1A1A1A]"> Register Today</span></Link>
           </div>
         </div>
       </Container>
